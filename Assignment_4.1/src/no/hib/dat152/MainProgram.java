@@ -7,8 +7,8 @@ import java.util.Scanner;
 public class MainProgram {
 
 	public static void main(String[] args) {
-		Locale locale = new Locale("de", "De");
-//		Locale locale = new Locale("no", "NO");
+//		Locale locale = new Locale("de", "De");
+		Locale locale = new Locale("no", "NO");
 //		Locale locale = new Locale("en", "GB");
 		
 		boolean forsett = true;
