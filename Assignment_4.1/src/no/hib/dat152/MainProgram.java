@@ -10,7 +10,7 @@ public class MainProgram {
 //		Locale locale = new Locale("de", "De");
 		Locale locale = new Locale("no", "NO");
 //		Locale locale = new Locale("en", "GB");
-		
+		//;)
 		boolean forsett = true;
 		Store butikk = new Store(locale);
 		ResourceBundle apptexts = ResourceBundle.getBundle("apptexts", locale);
