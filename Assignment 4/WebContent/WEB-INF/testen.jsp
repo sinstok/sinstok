@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="T" tagdir="/WEB-INF/tags" %>
 <fmt:setLocale
 scope="session"
 value="de"/>
@@ -15,5 +16,8 @@ value="de"/>
 <fmt:bundle basename="apptexts">
 	<fmt:message key="Apple"/>
 </fmt:bundle>
+<p>
+<T:copyright since="2008"></T:copyright>
+</p>
 </body>
 </html>
