@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import helpers.LocaleHelper;
+
 /**
  * Servlet implementation class LocaleServlet
  */
@@ -29,6 +31,8 @@ public class LocaleServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String locale = request.getParameter("locale");
 		if(locale != null){
+			
+			Cookie cok = LocaleHelper.getCookie(request, "locale");
 			Cookie cookie = new Cookie("locale", locale);
 			cookie.setMaxAge(60*60*24*365);
 			response.addCookie(cookie);
