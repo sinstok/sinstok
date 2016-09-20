@@ -34,8 +34,7 @@ public class ProductsServlet extends HttpServlet {
 		LocaleHelper.setSessionLocale(request);
 		
 		dao = new DAO();
-		Cookie localeCookie = LocaleHelper.getCookie(request, "locale");
-		request.setAttribute("locale", localeCookie.getValue());
+		
 		request.setAttribute("products", dao.getProducts());
 		request.getRequestDispatcher("WEB-INF/products.jsp").forward(request, response);
 	}

@@ -31,8 +31,6 @@ public class LocaleServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String locale = request.getParameter("locale");
 		if(locale != null){
-			
-			Cookie cok = LocaleHelper.getCookie(request, "locale");
 			Cookie cookie = new Cookie("locale", locale);
 			cookie.setMaxAge(60*60*24*365);
 			response.addCookie(cookie);
