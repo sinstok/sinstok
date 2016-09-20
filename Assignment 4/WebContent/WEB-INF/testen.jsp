@@ -17,7 +17,7 @@ value="de"/>
 	<fmt:message key="Apple"/>
 </fmt:bundle>
 <p>
-<T:copyright since="2008"></T:copyright>
+<T:copyright since="2008">HiB</T:copyright>
 </p>
 </body>
 </html>
