@@ -8,6 +8,4 @@
  Integer currentYear = Calendar.getInstance().get(Calendar.YEAR);
 %>
 
-<c:set var="since" scope="page" value="${since}"/>
-
-&#169; <%= RomanNumber.toRoman(since) %>-<%= RomanNumber.toRoman(currentYear) %> HiB
+&#169; <%= RomanNumber.toRoman(since) %>-<%= RomanNumber.toRoman(currentYear) %> <jsp:doBody/>
