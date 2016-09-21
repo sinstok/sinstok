@@ -21,7 +21,7 @@
 		<img src="${product.imageFile}" alt="Coffe Cup" height="150" width="150">
 			<p>
 				<fmt:message key="name" /> : ${product.pName} </br>
-				<fmt:message key="price" /> : <fmt:formatNumber value="${product.priceInEuro}" type="currency"/></p> </br>
+				<fmt:message key="price" /> : <fmt:formatNumber value="${product.priceInEuro}" type="currency"/> </br>
 				<c:forEach items="${product.descriptions}" var="description">
 
 					<c:if test="${description.langCode == pageContext.response.locale}">
@@ -29,10 +29,19 @@
 					</c:if>
 
 				</c:forEach>
+				<form method="post" action="products">
+					<input type="hidden" name="productNumber" value="${product.pno}">
+					<input type="submit" value="Legg i handlevogn">
+				</form>
 			</p>
 		</c:forEach>
 
 	</fmt:bundle>
+	
+	<p>
+	<a href="cart">Til kasse</a>
+	<a href="home">Hjem</a>
+	</p>
 
 	<T:copyright since="2008">Høgskolen i Bergen</T:copyright>
 </body>
