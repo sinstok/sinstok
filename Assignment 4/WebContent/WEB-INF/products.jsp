@@ -31,18 +31,20 @@
 				</c:forEach>
 				<form method="post" action="products">
 					<input type="hidden" name="productNumber" value="${product.pno}">
-					<input type="submit" value="Legg i handlevogn">
+					<fmt:message key="AddToCart" var="addToCart"/>
+					<input type="submit" value="${addToCart}">
 				</form>
 			</p>
 		</c:forEach>
 
-	</fmt:bundle>
+	
 	
 	<p>
-	<a href="cart">Til kasse</a>
-	<a href="home">Hjem</a>
+	<a href="home"><fmt:message key="Home" /></a>
+	<a href="cart"><fmt:message key="Cart" /></a>
 	</p>
 
 	<T:copyright since="2008">Høgskolen i Bergen</T:copyright>
+	</fmt:bundle>
 </body>
 </html>
