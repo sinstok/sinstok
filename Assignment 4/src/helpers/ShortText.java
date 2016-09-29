@@ -20,7 +20,13 @@ public class ShortText extends SimpleTagSupport {
         body.invoke(stringWriter);
         String bodyText = stringWriter.getBuffer().toString();
         
-        String shortText = bodyText.substring(0,maxChars) + "...";
+        String shortText;
+        if(bodyText.length() <= maxChars){
+        	shortText = bodyText;
+        } else {
+        	shortText = bodyText.substring(0,maxChars) + "...";	
+        }
+        
         
         out.print(shortText);
 	}
